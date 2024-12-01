@@ -15,7 +15,6 @@
 @include("navbar")
  @include("card", $breweries)
 
-        <!-- Pagination links -->
         <div class="mt-4">
             {{ $breweries->links('pagination::bootstrap-5') }}
         </div>

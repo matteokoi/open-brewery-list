@@ -28,7 +28,6 @@ class BreweryController extends Controller
             ['path' => $request->url(), 'query' => $request->query()]
         );
 
-        // Pass paginated data to the view
         return view('welcome', data: ['breweries' => $paginatedBreweries]);
     }
 }
