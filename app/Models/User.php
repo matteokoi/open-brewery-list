@@ -59,7 +59,7 @@ class User extends Authenticatable
         $input = trim($input);
         $input = stripslashes($input);
         $input = htmlspecialchars($input, ENT_QUOTES, 'UTF-8');
-        $input = filter_var($input, FILTER_SANITIZE_STRING);
+        $input = htmlspecialchars($input, ENT_QUOTES, 'UTF-8');
 
         return $input;
     }

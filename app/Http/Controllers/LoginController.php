@@ -22,7 +22,7 @@ class LoginController extends Controller
 
         $username = User::secureInput($request->username);
         $password = User::secureInput($request->password);
-        $user = \App\Models\User::where('username', $username)->first();
+        $user = User::where('username', $username)->first();
 
         if (!$user || !Hash::check($password, $user->password)) {
             return response()->json(['error' => 'Invalid credentials'], 401);
